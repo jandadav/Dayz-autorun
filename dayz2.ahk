@@ -38,17 +38,17 @@ SetRun() {
         ;Send, {Shift Down}
   sleep, 200
   Send, {w Down}
-  SoundBeep, 1000, 50
-  SoundBeep, 1200, 50
-  SoundBeep, 1400, 50
+;   SoundBeep, 1000, 50
+;   SoundBeep, 1200, 50
+;   SoundBeep, 1400, 50
 }
 
 UnsetRun() {
   global SprintToggle:=false
   Send, {w up}
   ;Send, {Shift Up}
-  SoundBeep, 1600, 50
-  SoundBeep, 1000, 50
+;   SoundBeep, 1600, 50
+;   SoundBeep, 1000, 50
 }
 
 ; w activation and cancel
@@ -56,8 +56,8 @@ UnsetRun() {
     KeyWait, w
     if (SprintToggle) {
         global SprintToggle:=false
-        SoundBeep, 1600, 50
-        SoundBeep, 1000, 50
+        ; SoundBeep, 1600, 50
+        ; SoundBeep, 1000, 50
         return
     }
     if (A_PriorHotkey != "~w" or A_TimeSincePriorHotkey > 400)
